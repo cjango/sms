@@ -1,5 +1,5 @@
 {
-    "name": "cjango/wechat",
+    "name": "cjango/think-sms",
     "description": "cjango sms sdk for thinkphp",
     "keywords": ["cjango", "sms", "sdk"],
     "type": "think-extend",
