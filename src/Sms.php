@@ -22,4 +22,22 @@ class Sms
     {
         $this->config = Config::get('sms');
     }
+
+    /**
+     * 发送短信
+     * @return [type] [description]
+     */
+    public function send()
+    {
+        #Todo..
+    }
+
+    /**
+     * 验证短信
+     * @return [type] [description]
+     */
+    public function check()
+    {
+        #Todo..
+    }
 }
