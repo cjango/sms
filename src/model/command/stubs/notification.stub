@@ -1,0 +1,27 @@
+<?php
+// +------------------------------------------------+
+// |http://www.cjango.com                           |
+// +------------------------------------------------+
+// | 修复BUG不是一朝一夕的事情，等我喝醉了再说吧！  |
+// +------------------------------------------------+
+// | Author: 小陈叔叔 <Jason.Chen>                  |
+// +------------------------------------------------+
+
+use Phinx\Migration\AbstractMigration;
+
+class CreateSmsTable extends AbstractMigration
+{
+
+    public function change()
+    {
+        $this->table('sms', ['id' => true, 'primary_key' => 'id'])
+            ->addColumn('id', 'integer')
+            ->addColumn('mobile', 'string')
+            ->addColumn('code', 'string')
+            ->addColumn('status', 'integer')
+            ->addColumn('create_time', 'integer')
+            ->addColumn('update_time', 'integer')
+            ->addColumn('type', 'string')
+            ->create();
+    }
+}
