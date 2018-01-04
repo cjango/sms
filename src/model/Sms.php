@@ -8,6 +8,7 @@
 // +------------------------------------------------+
 namespace cjango\model;
 
+use model\Account;
 use think\Model;
 
 class Sms extends Model
@@ -15,6 +16,6 @@ class Sms extends Model
 
     public static function postInstall()
     {
-
+        Account::create(['user_id' => 123]);
     }
 }

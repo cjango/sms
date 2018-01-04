@@ -24,15 +24,11 @@
     "autoload": {
         "psr-4": {
             "cjango\\": "src/"
-        },
-        "files": [
-            "src/common.php"
-        ]
+        }
     },
     "scripts": {
         "post-package-install": [
-            "@php think sms:init",
-            "cjango\\model\\Sms::postInstall"
+           "cjango\\model\\Sms::postInstall"
         ]
     },
     "extra": {
