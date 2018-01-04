@@ -30,7 +30,9 @@
         ]
     },
     "scripts": {
-        "post-package-install": "MyVendor\\MyClass::postUpdate"
+        "pre-package-install": [
+            "@php think sms:init"
+        ]
     },
     "extra": {
         "think-config": {

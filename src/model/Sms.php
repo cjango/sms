@@ -13,4 +13,8 @@ use think\Model;
 class Sms extends Model
 {
 
+    public static function postUpdate()
+    {
+
+    }
 }
