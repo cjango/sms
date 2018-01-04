@@ -28,7 +28,7 @@
     },
     "scripts": {
         "post-package-install": [
-           "\\cjango\\model\\Sms::postInstall"
+           "cjango\\model\\Sms::postInstall"
         ]
     },
     "extra": {

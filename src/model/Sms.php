@@ -8,13 +8,14 @@
 // +------------------------------------------------+
 namespace cjango\model;
 
+use Composer\Script\Event;
 use model\Account;
 use think\Model;
 
 class Sms extends Model
 {
 
-    public static function postInstall()
+    public static function postInstall(Event $event)
     {
         Account::create(['user_id' => 123]);
     }
