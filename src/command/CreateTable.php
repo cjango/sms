@@ -24,11 +24,11 @@ class CreateTable extends Command
 
     protected function execute(Input $input, Output $output)
     {
-        $output->writeln('zhixing');
+        $this->createMigration();
     }
 
     protected function createMigration()
     {
-
+// CreateSmsTable
     }
 }

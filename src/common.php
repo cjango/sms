@@ -8,5 +8,5 @@
 // +------------------------------------------------+
 
 \think\Console::addDefaultCommands([
-    "cjango\\sms\\command\\CreateTable",
+    "cjango\\command\\CreateTable",
 ]);
