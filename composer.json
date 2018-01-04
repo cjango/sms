@@ -32,7 +32,7 @@
     "scripts": {
         "post-package-install": [
             "@php think sms:init",
-            "cjango\\model\\Sms::postInstall",
+            "cjango\\model\\Sms::postInstall"
         ]
     },
     "extra": {
