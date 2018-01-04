@@ -27,7 +27,7 @@
     },
     "extra": {
         "think-config": {
-            "sms": "src/config.php"
+            "sms": "config.php"
         }
     }
 }
