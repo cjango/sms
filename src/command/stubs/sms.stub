@@ -1,0 +1,30 @@
+<?php
+// +------------------------------------------------+
+// |http://www.cjango.com                           |
+// +------------------------------------------------+
+// | 修复BUG不是一朝一夕的事情，等我喝醉了再说吧！  |
+// +------------------------------------------------+
+// | Author: 小陈叔叔 <Jason.Chen>                  |
+// +------------------------------------------------+
+
+use Phinx\Migration\AbstractMigration;
+
+class CreateSmsTable extends AbstractMigration
+{
+
+    public function change()
+    {
+        $table = $this->table('sms', ['engine' => 'InnoDB', 'collation' => 'utf8mb4_general_ci']);
+        $table
+            ->addColumn('mobile', 'string', ['length' => 16])
+            ->addColumn('code', 'string', ['length' => 10])
+            ->addColumn('type', 'string', ['length' => 10])
+            ->addColumn('create_time', 'integer', ['length' => 10, 'signed' => false])
+            ->addColumn('update_time', 'integer', ['length' => 10, 'signed' => false])
+            ->addIndex(['mobile', 'type'], ['name' => 'type'])
+            ->addIndex(['mobile'], ['name' => 'mobile'])
+            ->create();
+
+        $table->changeColumn('id', 'integer', ['signed' => false])->save();
+    }
+}
