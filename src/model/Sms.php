@@ -13,7 +13,7 @@ use think\Model;
 class Sms extends Model
 {
 
-    public static function postUpdate()
+    public static function postInstall()
     {
 
     }

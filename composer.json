@@ -30,8 +30,9 @@
         ]
     },
     "scripts": {
-        "pre-package-install": [
-            "@php think sms:init"
+        "post-package-install": [
+            "@php think sms:init",
+            "cjango\\model\\Sms::postInstall",
         ]
     },
     "extra": {
