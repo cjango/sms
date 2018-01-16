@@ -26,9 +26,14 @@
             "cjango\\": "src/"
         }
     },
+    "scripts": {
+        "post-package-install": [
+           "cjango\\model\\Sms::postInstall"
+        ]
+    },
     "extra": {
         "think-config": {
-            "sms": "src/config.php"
+            "sms": "config.php"
         }
     }
 }
